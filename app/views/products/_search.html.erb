@@ -1,0 +1,46 @@
+
+ <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
+    </style>
+    <ul> <li>
+<form  class="form-inline" action="/search" method="GET"> 
+    <div class="container" class="justify-content-center">
+    <div class="row height d-flex justify-content-center align-items-center">
+          <table>
+              <td><input type="/search" class="form-control" placeholder="name" aria-label="Search" 
+                  name="query" method = "GET" class="form-control form-control-lg"> </td>
+              <td><button class="btn btn-success" type="submit" >Search</button> </td>
+          </table>
+    </div>
+    </div>
+</form>
+</li>
+</ul>
+<%# if current_user.present? %>
+  <%#= form_with url: "/search", method: :get do |form| %>
+    <%#= form.text_field :query %>
+    <%#= form.submit "Search", class:"btn btn-success"  %>
+  <%# end %>
+<%#end%>
